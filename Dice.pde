@@ -7,10 +7,12 @@ Die bob;
 void draw()
 {
   for(int r = 20; r<= 280; r+= 70){
+
     for(int c = 20; c<= 280; c+= 70){
     bob = new Die(r, c);
     bob.roll();
     bob.show();
+    
     
     }
   }
@@ -19,6 +21,7 @@ void draw()
 void mousePressed()
 {
   redraw();
+  
 }
 class Die //models one single dice cube
 {
@@ -56,9 +59,41 @@ class Die //models one single dice cube
       int dotx = dieX + dieSize/2;
       ellipse(dotx, dieY+15, 12, 12);
       ellipse(dotx, dieY+35, 12, 12);
+    } else if(dieNumber == 3){
+      fill(0);
+      ellipse(dieX + 7, dieY + 7, 10, 10);
+      ellipse(dieX + 25, dieY + 25, 10, 10);
+      ellipse(dieX + 43, dieY + 43, 10, 10);
+      
+    }else if (dieNumber == 4){
+      fill(0);
+      ellipse(dieX+12, dieY+10, 10, 10);
+      ellipse(dieX+40, dieY+10, 10, 10);
+      ellipse(dieX+12, dieY+40, 10, 10);
+      ellipse(dieX+40, dieY+40, 10, 10);
+    } else if(dieNumber == 5){
+      fill(0);
+      ellipse(dieX+25, dieY + 25, 10, 10);
+      ellipse(dieX+12, dieY+10, 10, 10);
+      ellipse(dieX+40, dieY+10, 10, 10);
+      ellipse(dieX+12, dieY+40, 10, 10);
+      ellipse(dieX+40, dieY+40, 10, 10);
+    } else if(dieNumber == 6){
+      fill(0);
+      ellipse(dieX+12, dieY+7, 10, 10);
+      ellipse(dieX+12, dieY+25, 10, 10);
+      ellipse(dieX+12, dieY+43, 10, 10);
+      ellipse(dieX+40, dieY+7, 10, 10);
+      ellipse(dieX+40, dieY+25, 10, 10);
+      ellipse(dieX+40, dieY+43, 10, 10);
     }
 
     //your code here draw a square
+    //constructor = member function and initializes member variables
+    //nested loops
+    //instance = new object
+    //local variables only exist in the constructor != member variables
+    
   }
   
 }
