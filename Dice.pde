@@ -47,7 +47,8 @@ class Die //models one single dice cube
   }
   void show()
   {
-    fill(255, 255, 255);
+    int[] colors = {};    
+    fill(colors[(int)(Math.random()*colors.length-1)]);
     square(dieX, dieY, dieSize);
     if (dieNumber == 1){
       fill(0, 0, 0);
